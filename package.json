@@ -1,0 +1,28 @@
+{
+  "name": "socket_gateway",
+  "version": "1.0.0",
+  "description": "socket gateway",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "eureka-js-client": "^4.5.0",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "kafka-node": "^5.0.0",
+    "socket_gateway": "file:",
+    "socket.io": "^4.7.5"
+  },
+  "scripts": {
+    "run": "npm index.js",
+    "dev": "nodemon index.js",
+    "test": "test"
+  },
+  "keywords": [
+    "socket_gateway"
+  ],
+  "author": "goddie9x",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
