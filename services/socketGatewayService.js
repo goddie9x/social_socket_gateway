@@ -21,8 +21,8 @@ class SocketGateway {
             console.error(`[${new Date().toISOString()}] Error: receiverId or roomId not provided`);
             return;
         }
-        const event = event || 'new';
-        this.io.of(channelPrefix).to(targetRoomId).emit(event, message);
+        const targetEvent = event || 'new';
+        this.io.of(channelPrefix).to(targetRoomId).emit(targetEvent, message);
     }
 }
 
