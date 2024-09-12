@@ -1,5 +1,5 @@
-const { activeServiceConsumer } = require('../utils/kafka');
-const { kafkaClient } = require('../utils/kafka');
+const { activeServiceConsumer } = require('../utils/kafka/consumer');
+const { kafkaClient } = require('../utils/kafka/producer');
 const { KAFKA_TOPICS } = require('../utils/constants/kafka');
 const socketGatewayService = require('../services/socketGatewayService');
 
