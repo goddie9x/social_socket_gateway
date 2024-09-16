@@ -10,7 +10,8 @@ class SocketGateway {
     setSocketIo(io) {
         this.io = io;
     }
-    handleRedisSocketMessage({ namespace, roomId, event, message }) {
+    handleRedisSocketMessage(payloads) {
+        const { namespace, roomId, event, message } = payloads;
         if(!event){
             const err = `[${new Date().toISOString()}] Error: roomId not provided`;
             console.error(err);
@@ -29,6 +30,9 @@ class SocketGateway {
             console.error(err);
             throw new TargetNotExistException(err);
         }
+
+        console.log(payloads);
+
 
         this.io.of(channelPrefix).to(roomId).emit(event, message);
     }
