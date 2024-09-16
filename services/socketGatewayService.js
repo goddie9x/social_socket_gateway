@@ -11,6 +11,8 @@ class SocketGateway {
         this.io = io;
     }
     handleRedisSocketMessage(payloads) {
+        console.log('14',payloads);
+
         const { namespace, roomId, event, message } = payloads;
         if(!event){
             const err = `[${new Date().toISOString()}] Error: roomId not provided`;
