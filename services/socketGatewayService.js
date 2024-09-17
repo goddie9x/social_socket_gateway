@@ -22,7 +22,7 @@ class SocketGateway {
             throw new TargetNotExistException(err);
         }
         try {
-            this.io.of(namespace).to(CHANNELS.NOTIFICATION_CHANNEL.EVENTS.NEW_NOTIFICATION + '-' + roomId).emit(event, message);
+            this.io.of(namespace).to(event + roomId).emit(event, message);
         } catch (error) {
             console.log(error);
         }
